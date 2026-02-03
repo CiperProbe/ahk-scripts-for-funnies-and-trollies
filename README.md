@@ -14,4 +14,8 @@
 
 ---
 
+There will be no updates or anything pre-released.
+
+---
+
 Beware of increasing the value! It could cause epilepsy if used in-game (Specifically those like Right Spin)
