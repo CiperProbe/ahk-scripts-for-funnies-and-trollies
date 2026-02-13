@@ -1,6 +1,6 @@
 # AHK scripts designed for funnies and trollies.
 
-## btw u need AutoHotKey for this :з
+## btw u need [AutoHotKey](https://www.autohotkey.com/) (Both versions are fine.) for this :з
 
 ## Controls
 
