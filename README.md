@@ -1,6 +1,4 @@
-# u need [AutoHotKey](https://www.autohotkey.com/) for this :з
-
-## Both versions are fine
+# u need [AutoHotKey](https://www.autohotkey.com/) for this :з (Both versions are fine.)
 
 ## Controls
 
