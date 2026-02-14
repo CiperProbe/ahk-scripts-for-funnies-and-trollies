@@ -47,12 +47,6 @@ F4::
     SetTimer, RemoveToolTip, 1000
 return
 
-F5::
-    currentSpeed := currentSpeed * 10
-    ToolTip, ULTRA BOOST! Speed: %currentSpeed%
-    SetTimer, RemoveToolTip, 1000
-return
-
 NumpadAdd::
     currentSpeed := currentSpeed + 1
     ToolTip, Speed: %currentSpeed%

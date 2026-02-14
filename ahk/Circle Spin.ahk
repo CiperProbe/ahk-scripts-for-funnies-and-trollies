@@ -37,11 +37,6 @@ F4::
     SetTimer, RemoveToolTip, 1000
 return
 
-F5::
-    speed_multiplier := speed_multiplier * 100
-    ToolTip, ULTRA BOOST! Speed: %speed_multiplier%
-    SetTimer, RemoveToolTip, 1000
-return
 
 NumpadAdd::
     speed_multiplier := speed_multiplier + 0.1
