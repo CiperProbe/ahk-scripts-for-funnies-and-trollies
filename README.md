@@ -1,6 +1,6 @@
 # u need [AutoHotKey](https://www.autohotkey.com/) for this :з (Both versions are fine.)
 
-## Controls
+## (Most) Controls
 
 - F1 to activate
 
