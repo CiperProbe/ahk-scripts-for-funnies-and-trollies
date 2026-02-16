@@ -12,6 +12,8 @@
 
 - ~~And verious other keybinds, but they are a secret you must find, unless you dig the files ;3~~
 
+### Remember that some Control's arent Accurate. Experiment with them, Just remember that F1-F4 are the majority of most of these scripts.
+
 ---
 
 There will be no updates or anything pre-released. (only when i feel like it >:3)
