@@ -10,6 +10,8 @@
 
 - F4 return to default value
 
+- ~~And verious other keybinds, but they are a secret you must find, unless you dig the files ;3~~
+
 ---
 
 There will be no updates or anything pre-released. (only when i feel like it >:3)
