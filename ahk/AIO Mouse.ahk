@@ -17,6 +17,10 @@ CoordMode, ToolTip, Screen
 DetectHiddenWindows, On
 SetTitleMatchMode, 2
 
+; Error handling
+OnExit("CleanupAndExit")
+ComObjError(false)
+
 ; High-precision timing
 DllCall("QueryPerformanceFrequency", "Int64", freq)
 if (!freq) {
@@ -44,6 +48,7 @@ global ClickCount := 0
 global MissedClicks := 0
 global IsClicking := false
 global MaxModeRunning := false
+global EmergencyStop := false
 
 SetTimer, UpdateTooltip, 100
 SetTimer, HideTooltip, 2000
@@ -56,7 +61,6 @@ SetTimer, HideTooltip, 2000
 *F5::ToggleLeftClick()
 *F6::ToggleRightClick()
 *F7::ToggleMiddleClick()
-*Esc::ExitApp
 
 *^F2::ToggleMouseHold()
 
@@ -323,4 +327,45 @@ ToggleMouseHold() {
             Click, Up, Middle
         }
     }
+}
+
+CleanupAndExit() {
+    global AutoclickerActive, MaxModeRunning, MouseHoldActive, LeftClickActive, RightClickActive, MiddleClickActive, EmergencyStop
+    
+    ; Set emergency stop flag
+    EmergencyStop := true
+    
+    ; Stop all timers
+    SetTimer, ClickLoop, Off
+    SetTimer, MaxModeLoop, Off
+    SetTimer, UpdateTooltip, Off
+    SetTimer, HideTooltip, Off
+    
+    ; Release any held mouse buttons
+    if (MouseHoldActive) {
+        try {
+            if (LeftClickActive) {
+                Click, Up, Left
+            }
+            if (RightClickActive) {
+                Click, Up, Right
+            }
+            if (MiddleClickActive) {
+                Click, Up, Middle
+            }
+        } catch e {
+            ; Ignore errors during cleanup
+        }
+    }
+    
+    ; Clear tooltip
+    ToolTip
+    
+    ; Reset states
+    AutoclickerActive := false
+    MaxModeRunning := false
+    MouseHoldActive := false
+    
+    ; Exit script
+    ExitApp
 }
