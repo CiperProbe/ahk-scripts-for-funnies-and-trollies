@@ -53,9 +53,9 @@ global EmergencyStop := false
 SetTimer, UpdateTooltip, 100
 SetTimer, HideTooltip, 2000
 
-TooltipActive := true
-MouseGetPos, TooltipX, TooltipY
-Tooltip, Mouse Spammer - READY`nF1: Toggle Autoclicker`nF2-F3: Speed Control`nF4: Reset`nF5-F7: Click Types`nCtrl+F1: Max Mode`nCtrl+F2: Mouse Hold, TooltipX + 20, TooltipY + 20
+global StartupTooltipActive := true
+MouseGetPos, StartupTooltipX, StartupTooltipY
+Tooltip, Mouse Spammer - READY`nF1: Toggle Autoclicker`nF2-F3: Speed Control`nF4: Reset`nF5-F7: Click Types`nCtrl+F1: Max Mode`nCtrl+F2: Mouse Hold, StartupTooltipX + 20, StartupTooltipY + 20, 2
 SetTimer, RemoveStartupTooltip, -3000
 
 ^F1::ToggleMaximumMode()
@@ -376,5 +376,7 @@ CleanupAndExit() {
 }
 
 RemoveStartupTooltip() {
-    ToolTip
+    global StartupTooltipActive
+    StartupTooltipActive := false
+    ToolTip, , , , 2
 }
