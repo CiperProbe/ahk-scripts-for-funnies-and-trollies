@@ -29,7 +29,7 @@ if (!freq) {
 tickInterval := 1000000 // freq
 
 global CPS := 8
-global SpeedIncrement := 4
+global SpeedIncrement := 2
 global SpeedDecrement := 2
 global LeftClickActive := true
 global RightClickActive := false
