@@ -1,5 +1,3 @@
-# u need [AutoHotKey](https://www.autohotkey.com/) for this (Both versions are fine.)
-
 ## (Most) Controls
 
 - F1 to activate
